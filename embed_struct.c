@@ -1,3 +1,5 @@
+// Modern C - p. 77
+
 #include <stdio.h>
 #include <time.h>
 
@@ -18,4 +20,5 @@ int main() {
     printf("%zu\n", sizeof(p.bdate));
     printf("%zu\n", sizeof(p.bdate.date));
     printf("%zu\n", sizeof(p.bdate.precision));
+
 }

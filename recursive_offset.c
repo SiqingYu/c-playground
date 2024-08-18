@@ -1,4 +1,4 @@
-// 21st Century C (p. 138)
+// 21st Century C - p. 138
 
 #include <stdio.h>
 
