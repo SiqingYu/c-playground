@@ -21,8 +21,7 @@ size_t strlen(char const string[static 1]) {
 // Use function notation for function pointer parameters when they cannot be null.
 /* This emphasizes that the ˋˋ handler '' argument cannot be null . */
 int atexit(void (*handler)(void)) {
-    // TODO: Add implementation here
-    
+    handler(); 
     return 0;
 }
 /* Compatible declaration for the same function . */
@@ -30,8 +29,11 @@ int atexit(void (*handler)(void)) {
 
 int main() {
     char const *null_ptr = NULL;
-    
-    printf("%zu\n", strlen(null_ptr));
+    void (*func_ptr)(void) = NULL;
+
+    // segmentation fault 
+    // printf("%zu\n", strlen(null_ptr));
+    printf("%d\n", atexit(func_ptr));
 
     return 0;
 }
